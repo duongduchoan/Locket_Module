@@ -109,8 +109,9 @@ if (ua.includes("Locket")) {
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 5.0,
-            qualityMbps: 5.0
+            quality_mbps: 10.0,
+            qualityMbps: 10.0,
+            max_file_size: 524288000
         }),
         camera_roll: JSON.stringify({
             gold_max_duration: 60.0,
@@ -122,9 +123,11 @@ if (ua.includes("Locket")) {
             trim_max_duration: 60.0,
             trimMaxDuration: 60.0,
             camera_roll_max_duration: 60.0,
-            quality_mbps: 5.0,
-            qualityMbps: 5.0,
-            flash_button: true
+            quality_mbps: 10.0,
+            qualityMbps: 10.0,
+            flash_button: true,
+            max_file_size: 524288000,
+            max_file_size_mb: 500
         }),
         live_photos: JSON.stringify({
             capture: true,
@@ -169,17 +172,25 @@ if (ua.includes("Locket")) {
         trim_max_duration: "60.0",
         gold_max_duration: "60.0",
         goldMaxDuration: "60.0",
-        video_quality_mbps: "5.0",
+        video_quality_mbps: "10.0",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
         audio_session_deactivation_enabled: "true",
         zoom_enabled: "true",
-        upload_main: "true",
-        upload_main_image_quality: "0.95",
-        upload_main_image_size: "2160",
-        upload_thumbnail_image_quality: "0.9",
-        upload_thumbnail_image_size: "1440"
+        camera_roll_video_max_size_mb: "500",
+        camera_roll_video_max_file_size: "524288000",
+        video_upload_max_bytes: "524288000",
+        video_max_bytes: "524288000",
+        max_video_file_size: "524288000",
+        upload_max_video_size: "524288000",
+        max_file_size_mb: "500",
+        video_max_mb: "500",
+        upload_main: "false",
+        upload_main_image_quality: "0.85",
+        upload_main_image_size: "1440",
+        upload_thumbnail_image_quality: "0.8",
+        upload_thumbnail_image_size: "720"
     });
 
     // ============================================================
@@ -286,8 +297,8 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         widget_frame_event: JSON.stringify({
-            uid: "shin_frame_2026",
-            url: "https://i.ibb.co/S74Rm5mm/khungsin.png",
+            uid: "shin_frame_v2",
+            url: "https://raw.githubusercontent.com/duongduchoan/Locket_Module/main/assets/khungsin.png",
             use_local_time_zone: true,
             placement: "below",
             start_at: "2020-01-01T00:00:00",
