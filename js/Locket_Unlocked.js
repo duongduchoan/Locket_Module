@@ -109,8 +109,8 @@ if (obj) {
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 0.8,
-            qualityMbps: 0.8,
+            quality_mbps: 0.6,
+            qualityMbps: 0.6,
             max_file_size: 524288000
         }),
         camera_roll: JSON.stringify({
@@ -123,8 +123,8 @@ if (obj) {
             trim_max_duration: 60.0,
             trimMaxDuration: 60.0,
             camera_roll_max_duration: 60.0,
-            quality_mbps: 0.8,
-            qualityMbps: 0.8,
+            quality_mbps: 0.6,
+            qualityMbps: 0.6,
             flash_button: true,
             max_file_size: 524288000,
             max_file_size_mb: 500
@@ -171,7 +171,7 @@ if (obj) {
         trim_max_duration: "60.0",
         gold_max_duration: "60.0",
         goldMaxDuration: "60.0",
-        video_quality_mbps: "0.8",
+        video_quality_mbps: "0.6",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
@@ -184,7 +184,12 @@ if (obj) {
         max_video_file_size: "524288000",
         upload_max_video_size: "524288000",
         max_file_size_mb: "500",
-        video_max_mb: "500"
+        video_max_mb: "500",
+        upload_main: "false",
+        upload_main_image_quality: "0.6",
+        upload_main_image_size: "1440",
+        upload_thumbnail_image_quality: "0.8",
+        upload_thumbnail_image_size: "1020"
     });
 
     // ============================================================
