@@ -399,7 +399,7 @@ if (ua.includes("Locket")) {
                 ]
             },
             {
-                section: "🚨 Tin Nóng",
+                section: "Decorative by Hoan",
                 items: [
                     { overlay_id: "caption:tin_nong", source: "remote", caption: { background: { colors: ["#500000", "#900C3F", "#C70039"] }, icon: { data: "🚨", type: "emoji" }, max_lines: 1, text: "TIN NÓNG 🚨", localized_text: { en: "BREAKING NEWS 🚨", vn: "TIN NÓNG 🚨" }, text_color: "#FFFFFF", type: "static_content" } },
                     { overlay_id: "caption:hoi", source: "remote", caption: { background: { colors: ["#FF758F", "#FFB3C1", "#FFF0F3"] }, icon: { data: "🐷", type: "emoji" }, max_lines: 1, text: "Hợi", text_color: "#590D22", type: "static_content" } },
