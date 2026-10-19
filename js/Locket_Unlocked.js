@@ -8,7 +8,7 @@
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"] || "";
 var obj = JSON.parse($response.body);
 
-if (ua.includes("Locket")) {
+if (obj) {
     obj.Attention = "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
     obj.entries = obj.entries || {};
 
@@ -184,12 +184,7 @@ if (ua.includes("Locket")) {
         max_video_file_size: "524288000",
         upload_max_video_size: "524288000",
         max_file_size_mb: "500",
-        video_max_mb: "500",
-        upload_main: "false",
-        upload_main_image_quality: "0.85",
-        upload_main_image_size: "1440",
-        upload_thumbnail_image_quality: "0.8",
-        upload_thumbnail_image_size: "720"
+        video_max_mb: "500"
     });
 
     // ============================================================
@@ -315,46 +310,6 @@ if (ua.includes("Locket")) {
         profile_menu_v2_enabled: "true"
     });
 
-    // ============================================================
-    // 7. HỆ THỐNG, CACHE & STORAGE CDN
-    // ============================================================
-    Object.assign(obj.entries, {
-        cdn_domain_replacements: JSON.stringify({ "firebasestorage.googleapis.com": "cdn.locketcamera.com" }),
-        cdn_domain_replacements_video: "true",
-        storage_bucket: "gs://locket-img",
-        storage_bucket_video: "gs://locket-video",
-        image_cache_max_age_sec: "157680000",
-        image_cache_max_size: "400000000",
-        history_cache_age_days: "1000",
-        user_cache_max_age_sec: "691200",
-        friends_cache_max_age_sec: "2592000",
-        image_fetch_cache: "true",
-        image_cache_use_shared: "true",
-        use_doc_dir_for_image_cache: "true",
-        efficient_history_cache_invalidation: "true",
-        timestamp_based_history_fetches: "true",
-        get_latest_moment_v2: "true",
-        fetch_users_from_cloud_function: "true",
-        refresh_interval: "60",
-        firestore_refresh_v2: "true",
-        firestore_refresh_v3: "true",
-        keychain_access_retries: "true",
-        blocked_users_cached_sync_enabled: "true",
-        beta_features_enabled: "true",
-        join_testflight_enabled: "true",
-        safety_center: "true",
-        help_center: "true",
-        support_v2: "true",
-        privacy_choices_setting: "true",
-        request_att_permission: "true",
-        invite_link_preview_variant: "4",
-        share_history_config: JSON.stringify({ prompt_enabled: false, fetching_enabled: true }),
-        share_history_prompt_enabled: "false",
-        use_thumbnails_for_sharing: "true",
-        use_thumbnails_in_timeline: "true",
-        persist_onboarding_step: "true",
-        onboarding_contact_permission_step: "true"
-    });
 
     // ============================================================
     // 8. OVERLAY & CUSTOM CAPTIONS
