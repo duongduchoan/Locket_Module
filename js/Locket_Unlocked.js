@@ -55,9 +55,9 @@ if (ua.includes("Locket")) {
             title: "Lên Locket Gold rồi đó 😎",
             feature_set: [
                 {
-                    title: "Nhớ follow kênh tiktok @duyvinh.09 ✨",
-                    body: "Một follow của bạn, một niềm vui của mình 💛",
-                    imageURL: "https://i.ibb.co/bj2Y3d0y/L-n-Gold-R-i-1.png"
+                    title: "Hẹ Hẹ Hẹ ✨",
+                    body: "Mấy con gà 💛",
+                    imageURL: "https://i.ibb.co/d0FDT94k/tu-t.jpg"
                 }
             ],
             primary_button_title: "Xong",
