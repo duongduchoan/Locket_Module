@@ -109,8 +109,8 @@ if (ua.includes("Locket")) {
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 10.0,
-            qualityMbps: 10.0,
+            quality_mbps: 0.8,
+            qualityMbps: 0.8,
             max_file_size: 524288000
         }),
         camera_roll: JSON.stringify({
@@ -123,8 +123,8 @@ if (ua.includes("Locket")) {
             trim_max_duration: 60.0,
             trimMaxDuration: 60.0,
             camera_roll_max_duration: 60.0,
-            quality_mbps: 10.0,
-            qualityMbps: 10.0,
+            quality_mbps: 0.8,
+            qualityMbps: 0.8,
             flash_button: true,
             max_file_size: 524288000,
             max_file_size_mb: 500
@@ -172,7 +172,7 @@ if (ua.includes("Locket")) {
         trim_max_duration: "60.0",
         gold_max_duration: "60.0",
         goldMaxDuration: "60.0",
-        video_quality_mbps: "10.0",
+        video_quality_mbps: "0.8",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
@@ -297,7 +297,7 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         widget_frame_event: JSON.stringify({
-            uid: "shin_frame_v2",
+            uid: "midautumn_2026",
             url: "https://raw.githubusercontent.com/duongduchoan/Locket_Module/main/assets/khungsin.png",
             use_local_time_zone: true,
             placement: "below",
