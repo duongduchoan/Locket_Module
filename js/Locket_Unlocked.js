@@ -132,8 +132,7 @@ if (ua.includes("Locket")) {
         live_photos: JSON.stringify({
             capture: true,
             viewing: true,
-            catch_up: true,
-            widget_looping_mode: "never"
+            catch_up: true
         }),
         camera_filter_config: JSON.stringify({
             allows_custom_filters: true,
@@ -286,24 +285,9 @@ if (ua.includes("Locket")) {
     });
 
     // ============================================================
-    // 6. WIDGET, THÔNG BÁO & GIAO DIỆN (JOURNAL / PROFILE)
+    // 6. THÔNG BÁO & GIAO DIỆN (JOURNAL / PROFILE)
     // ============================================================
     Object.assign(obj.entries, {
-        widget_frame_event_max_images: "5",
-        android_widget_frame_event_enabled: "true",
-        widget_badge_enabled: "true",
-        widget_badge_v2: "true",
-        widget_stale_state_enabled: "false",
-        widget_last_sent_indicator: "false",
-        widget_sync_token_reload_mode: "clearTokenNever",
-        widget_frame_event: JSON.stringify({
-            uid: "midautumn_2026",
-            url: "https://raw.githubusercontent.com/duongduchoan/Locket_Module/main/assets/khungsin.png",
-            use_local_time_zone: true,
-            placement: "below",
-            start_at: "2020-01-01T00:00:00",
-            end_at: "2099-12-31T23:59:59"
-        }),
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "friending",
         register_live_activity_push_to_start_token: "true",
