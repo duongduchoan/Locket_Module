@@ -92,7 +92,7 @@ if (ua.includes("Locket")) {
         sentry_profiles_sample_rate: "0"
     });
 
-    // ============================================================
+        // ============================================================
     // 3. CAMERA, VIDEO, FILTERS & UPLOAD QUALITY
     // ============================================================
     Object.assign(obj.entries, {
@@ -113,15 +113,15 @@ if (ua.includes("Locket")) {
             qualityMbps: 0.6
         }),
         camera_roll: JSON.stringify({
-            gold_max_duration: 60.0,
-            goldMaxDuration: 60.0,
-            video_max_duration: 60.0,
-            videoMaxDuration: 60.0,
-            max_duration: 60.0,
-            maxDuration: 60.0,
-            trim_max_duration: 60.0,
-            trimMaxDuration: 60.0,
-            camera_roll_max_duration: 60.0,
+            gold_max_duration: 30.0,
+            goldMaxDuration: 30.0,
+            video_max_duration: 30.0,
+            videoMaxDuration: 30.0,
+            max_duration: 30.0,
+            maxDuration: 30.0,
+            trim_max_duration: 30.0,
+            trimMaxDuration: 30.0,
+            camera_roll_max_duration: 30.0,
             quality_mbps: 0.6,
             qualityMbps: 0.6,
             flash_button: true
