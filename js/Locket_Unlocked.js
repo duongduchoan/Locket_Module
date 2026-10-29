@@ -401,7 +401,27 @@ if (ua.includes("Locket")) {
             {
                 section: "Decorative by Hoan",
                 items: [
-                    { overlay_id: "caption:tin_nong", source: "remote", caption: { background: { colors: ["#500000", "#900C3F", "#C70039"] }, icon: { data: "🚨", type: "emoji" }, max_lines: 1, text: "TIN NÓNG 🚨", localized_text: { en: "BREAKING NEWS 🚨", vn: "TIN NÓNG 🚨" }, text_color: "#FFFFFF", type: "static_content" } },
+                    {
+    overlay_id: "caption:tin_nong_news",
+    source: "remote",
+    caption: {
+        background: { colors: ["#1F1C2C", "#928DAB"] },
+        icon: {
+            type: "image",
+            data: "https://img.icons8.com/fluency/96/news.png",
+            source: "url"
+        },
+        max_lines: 1,
+        text: "BẢN TIN 24/7",
+        localized_text: { en: "DAILY NEWS", vn: "BẢN TIN 24/7" },
+        text_color: "#FFFFFF",
+        type: "static_content"
+    }
+},
+                    { overlay_id: "caption:em_oi_chuyen_do", source: "remote", caption: { background: { colors: ["#2C0B4D", "#6A0572", "#AB83A1"] }, icon: { data: "https://img.icons8.com/color/96/mute.png", source: "url", type: "image" }, max_lines: 1, text: "Em ơi cái chuyện đó... 🫣", localized_text: { en: "Baby, about that thing... 🫣", vn: "Em ơi cái chuyện đó... 🫣" }, text_color: "#FFFFFF", type: "static_content" } },
+{ overlay_id: "caption:tau_moi_may_ra_ngoai", source: "remote", caption: { background: { colors: ["#111111", "#8B0000", "#E50914"] }, icon: { data: "https://img.icons8.com/color/96/door-opened.png", source: "url", type: "image" }, max_lines: 1, text: "Tau mời mày ra ngoài 👉🚪", localized_text: { en: "Please get out 👉🚪", vn: "Tau mời mày ra ngoài 👉🚪" }, text_color: "#FFFFFF", type: "static_content" } },
+{ overlay_id: "caption:may_toan_noi_oi_doi_oi", source: "remote", caption: { background: { colors: ["#E65100", "#FF8F00", "#FFC107"] }, icon: { data: "https://img.icons8.com/fluency/96/clown.png", source: "url", type: "image" }, max_lines: 1, text: "Mầy toàn nói mấy câu ới dời ơi 🤦‍♂️", localized_text: { en: "You talk nonsense 🤦‍♂️", vn: "Mầy toàn nói mấy câu ới dời ơi 🤦‍♂️" }, text_color: "#FFFFFF", type: "static_content" } },
+{ overlay_id: "caption:quang_da_noi_the", source: "remote", caption: { background: { colors: ["#241C10", "#8C6D23", "#D4AF37", "#F6E07A"] }, icon: { data: "https://img.icons8.com/fluency/96/crown.png", source: "url", type: "image" }, max_lines: 1, text: "Quang đã nói thế thì ok đi em 👑", localized_text: { en: "Quang said so, just do it 👑", vn: "Quang đã nói thế thì ok đi em 👑" }, text_color: "#1A1A1A", type: "static_content" } },
                     { overlay_id: "caption:hoi", source: "remote", caption: { background: { colors: ["#FF758F", "#FFB3C1", "#FFF0F3"] }, icon: { data: "🐷", type: "emoji" }, max_lines: 1, text: "Hợi", text_color: "#590D22", type: "static_content" } },
                     { overlay_id: "caption:tuat", source: "remote", caption: { background: { colors: ["#2C1A0E", "#5D4037", "#D7A86E"] }, icon: { data: "🐕", type: "emoji" }, max_lines: 1, text: "Tuất", text_color: "#FFFFFFE6", type: "static_content" } },
                     { overlay_id: "caption:snake_vibes", source: "remote", caption: { background: { colors: ["#2E7D32", "#66BB6A"] }, icon: { data: "🐍", type: "emoji" }, max_lines: 1, text: "Snake Vibes", localized_text: { en: "Snake Vibes", vn: "Chất rắn" }, text_color: "#FFFFFFE6", type: "static_content" } },
