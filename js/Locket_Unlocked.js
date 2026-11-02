@@ -20,7 +20,13 @@ if (ua.includes("Locket")) {
         feature_gates: JSON.stringify({
             app_icon_picker: "enabled",
             camera_roll: "enabled",
+            camera_roll_video: "enabled",
             camera_theme: "enabled",
+            camera_filters: "enabled",
+            camera_filter: "enabled",
+            custom_filters: "enabled",
+            ai_camera: "enabled",
+            ai_filters: "enabled",
             locket_views: "enabled",
             long_captions: "enabled",
             longer_video: "enabled",
@@ -38,7 +44,9 @@ if (ua.includes("Locket")) {
             camera_theme: true,
             locket_views: true,
             remove_ads: true,
-            custom_widget_frames: true
+            custom_widget_frames: true,
+            camera_filters: true,
+            profile_badge: true
         }),
         paywall_presentation_config: JSON.stringify({
             uid: "paywall_testflight",
@@ -68,6 +76,11 @@ if (ua.includes("Locket")) {
         }),
         android_subscribe_gold_button_enabled: "false",
         profile_badge_visible: "true",
+        profile_badge: "enabled",
+        badge_tier: "gold",
+        badge: "gold",
+        has_badge: "true",
+        is_gold: "true",
         lunar_new_year_app_icon_enabled: "true"
     });
 

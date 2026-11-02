@@ -1,11 +1,13 @@
-# Gói Cấu Hình Dành Riêng Cho Locket 💛
+# Gói Cấu Hình Dành Riêng Cho Locket 💛 (Tác giả: duongduchoan)
 
-Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold:
-- Mở khoá huy hiệu & giao diện Locket Gold vĩnh viễn.
-- Tải ảnh / video trực tiếp từ Thư viện (Camera Roll) lên Locket với chất lượng cao.
-- Mở rộng thời lượng quay và tải video lên tới **60 giây**.
-- Tăng Bitrate video lên **5.0 Mbps** (chuẩn Full HD siêu nét, không bị vỡ hạt) và nâng chất lượng ảnh lên mức tối đa.
-- Chặn quảng cáo trong lịch sử/feed và tắt tracking Sentry.
+Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp nhất:
+- **Bật huy hiệu Locket Gold vĩnh viễn:** Tự động tiêm và duy trì huy hiệu Gold trên trang cá nhân (`api.locketcamera.com`).
+- **Mở khóa bộ lọc & chụp ảnh biến hình AI:** Mở khóa icon Filter ngay trên camera với các bộ lọc AI (Chad meme looksmaxxing, mọc râu AI, đổi kiểu tóc, trang phục cưới AI, làm đẹp...).
+- **Tải ảnh / video trực tiếp từ Thư viện (Camera Roll)** lên Locket widget chất lượng cao.
+- **Mở rộng thời lượng quay và tải video lên tới 60 giây.**
+- **Tăng Bitrate video và nâng chất lượng ảnh lên mức tối đa.**
+- **Mở khóa hơn 100+ caption động độc quyền (Tin Nóng, Hài hước, Gen Z, Meme...).**
+- **Chặn quảng cáo trong lịch sử/feed và tắt tracking Sentry.**
 
 ---
 
@@ -15,13 +17,15 @@ Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp m�
 Locket_Module/
 ├── Locket.conf                  # File cấu hình Shadowrocket hoàn chỉnh cho Locket
 ├── README.md                    # Hướng dẫn sử dụng chi tiết
+├── index.html                   # Giao diện web giới thiệu / cài đặt module
 ├── assets/
 │   ├── LocketGold.mobileconfig  # Profile uBlockDNS cá nhân (chặn thu hồi & chặn tracking/ads)
 │   └── locket.mobileconfig      # Profile DNS Locket VIP dự phòng
 ├── js/
-│   ├── Locket_DuyVinh09.js      # Script can thiệp RevenueCat (kích hoạt gói Gold từ 03/02/2004)
-│   ├── Locket_Unlocked.js       # Script can thiệp Firebase Remote Config (Camera Roll, 60s video, Tin Nóng, Hợi)
-│   └── deleteHeader.js          # Script xoá cache ETag để đảm bảo luôn nhận Gold
+│   ├── Locket_DuyVinh09.js      # Script can thiệp RevenueCat (kích hoạt gói Gold VIP, Pro, VIP)
+│   ├── Locket_Unlocked.js       # Script can thiệp Firebase Remote Config (Bộ lọc AI, Camera Roll, Video 60s, Captions)
+│   ├── locket_profile.js        # Script can thiệp api.locketcamera.com (Giữ huy hiệu Gold luôn BẬT)
+│   └── deleteHeader.js          # Script xoá triệt để cache ETag & If-None-Match
 └── modules/
     └── Locket_Gold.sgmodule     # File module dành cho Shadowrocket / Surge / Loon
 ```

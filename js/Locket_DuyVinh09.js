@@ -1,44 +1,68 @@
-// ========= ID ========= //
-const mapping = {
-  'Locket': ['Gold']
+/***********************************************
+> Locket Gold Activator (RevenueCat)
+> Tác giả: duongduchoan (Locket_Module)
+> Chức năng: Mở khóa gói Locket Gold vĩnh viễn
+***********************************************/
+
+var ua = ($request && $request.headers) ? ($request.headers["User-Agent"] || $request.headers["user-agent"] || "") : "";
+var obj = {};
+
+try {
+    obj = JSON.parse($response.body);
+} catch (e) {
+    obj = {};
+}
+
+obj.Attention = "Locket Gold VIP - Kích hoạt thành công bởi duongduchoan!";
+
+const purchaseDate = "2004-02-03T10:10:14Z"; // 03-02-2004
+const expiresDate = "2999-12-31T23:59:59Z";
+
+var locketSub = {
+    auto_resume_date: null,
+    display_name: "locket_1600_1y",
+    is_sandbox: false,
+    ownership_type: "PURCHASED",
+    billing_issues_detected_at: null,
+    management_url: "https://apps.apple.com/account/subscriptions",
+    period_type: "normal",
+    price: {
+        amount: 399000.0,
+        currency: "VND"
+    },
+    expires_date: expiresDate,
+    grace_period_expires_date: null,
+    refunded_at: null,
+    unsubscribe_detected_at: null,
+    original_purchase_date: purchaseDate,
+    purchase_date: purchaseDate,
+    store: "app_store",
+    store_transaction_id: "2000001108724193"
 };
-// =========   Phần cố định  ========= // 
-// =========  @duyvinh09 ========= // 
-var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
-  obj = JSON.parse($response.body);
-obj.Attention = "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
-var duyvinh09 = {
-      auto_resume_date: null,
-      display_name: "locket_1600_1y",
-      is_sandbox: true,
-      ownership_type: "PURCHASED",
-      billing_issues_detected_at: null,
-      management_url: "https://apps.apple.com/account/subscriptions",
-      period_type: "normal",
-      price: {
-          "amount": 399000.0,
-          "currency": "VND"
-      },
-      expires_date: "9999-01-09T10:10:14Z",
-      grace_period_expires_date: null,
-      refunded_at: null,
-      unsubscribe_detected_at: null,
-      original_purchase_date: "2004-02-03T10:10:15Z",
-      purchase_date: "2004-02-03T10:10:14Z",
-      store: "app_store",
-      store_transaction_id: "2000001108724193",
-  },
-  locketGold = {
-      grace_period_expires_date: null,
-      purchase_date: "2004-02-03T10:10:14Z",
-      product_identifier: "locket_1600_1y",
-      expires_date: "9999-01-09T10:10:14Z"
-  };
-const match = Object.keys(mapping).find(e => ua.includes(e));
-if (match) {
-  let [e, s] = mapping[match];
-  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = duyvinh09) : obj.subscriber.subscriptions["locket_1600_1y"] = duyvinh09, obj.subscriber.entitlements[e] = locketGold
-} else obj.subscriber.subscriptions["locket_1600_1y"] = duyvinh09, obj.subscriber.entitlements.pro = locketGold;
+
+var locketGold = {
+    grace_period_expires_date: null,
+    purchase_date: purchaseDate,
+    original_purchase_date: purchaseDate,
+    product_identifier: "locket_1600_1y",
+    expires_date: expiresDate,
+    ownership_type: "PURCHASED",
+    store: "app_store"
+};
+
+obj.subscriber = obj.subscriber || {};
+obj.subscriber.first_seen = purchaseDate;
+obj.subscriber.original_purchase_date = purchaseDate;
+obj.subscriber.management_url = "https://apps.apple.com/account/subscriptions";
+obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
+obj.subscriber.entitlements = obj.subscriber.entitlements || {};
+
+// Kích hoạt tất cả các tier Locket Gold / Pro / VIP
+obj.subscriber.subscriptions["locket_1600_1y"] = locketSub;
+obj.subscriber.entitlements["Gold"] = locketGold;
+obj.subscriber.entitlements["pro"] = locketGold;
+obj.subscriber.entitlements["vip"] = locketGold;
+
 $done({
-  body: JSON.stringify(obj)
+    body: JSON.stringify(obj)
 });
