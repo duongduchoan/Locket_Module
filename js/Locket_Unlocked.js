@@ -108,6 +108,9 @@ if (ua.includes("Locket")) {
         // ============================================================
     // 3. CAMERA, VIDEO, FILTERS & UPLOAD QUALITY
     // ============================================================
+       // ============================================================
+    // 3. CAMERA, VIDEO, FILTERS & UPLOAD QUALITY (TỐI ƯU 2K & 60S)
+    // ============================================================
     Object.assign(obj.entries, {
         camera: JSON.stringify({
             gold_max_duration: 60.0,
@@ -122,22 +125,31 @@ if (ua.includes("Locket")) {
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 0.6,
-            qualityMbps: 0.6
+            quality_mbps: 0.9,       // Nâng từ 0.6 lên 0.9
+            qualityMbps: 0.9
         }),
         camera_roll: JSON.stringify({
-            gold_max_duration: 30.0,
-            goldMaxDuration: 30.0,
-            video_max_duration: 30.0,
-            videoMaxDuration: 30.0,
-            max_duration: 30.0,
-            maxDuration: 30.0,
-            trim_max_duration: 30.0,
-            trimMaxDuration: 30.0,
-            camera_roll_max_duration: 30.0,
-            quality_mbps: 0.6,
-            qualityMbps: 0.6,
+            gold_max_duration: 60.0, // Nâng từ 30s lên 60s
+            goldMaxDuration: 60.0,
+            video_max_duration: 60.0,
+            videoMaxDuration: 60.0,
+            max_duration: 60.0,
+            maxDuration: 60.0,
+            trim_max_duration: 60.0,
+            trimMaxDuration: 60.0,
+            camera_roll_max_duration: 60.0,
+            quality_mbps: 0.9,       // Nâng từ 0.6 lên 0.9
+            qualityMbps: 0.9,
             flash_button: true
+        }),
+        // Cấu hình mã hóa H.265 1080p chuẩn mới nhất cho Locket
+        camera_video_recording: JSON.stringify({
+            default: { maximum_duration: 30000, size: 1080, file_type: "mp4", video_codec: "h265" },
+            gold: { maximum_duration: 60000, size: 1080, file_type: "mp4", video_codec: "h265" }
+        }),
+        android_camera_video_recording: JSON.stringify({
+            default: { maximum_duration: 30000, size: 1080, file_type: "mp4", video_codec: "h265" },
+            gold: { maximum_duration: 60000, size: 1080, file_type: "mp4", video_codec: "h265" }
         }),
         live_photos: JSON.stringify({
             capture: true,
@@ -152,21 +164,20 @@ if (ua.includes("Locket")) {
             sheet_enabled: true,
             open_sheet_immediately: true,
             sheet_filters: [
-                { title: { en: "Goofy" }, filter_ids: ["okay_wig", "influencer", "looks_maxxing", "toothless", "bye_brows"] },
-                { title: { en: "Looks" }, filter_ids: ["bowling_ball", "blonde_bleached", "beard", "bob_cut", "buns", "tatted", "mohawk", "braces", "bye_brows"] },
-                { title: { en: "Celebrate" }, filter_ids: ["slimed", "princess", "disco_lights", "cash_money", "happy_birthday"] },
-                { title: { en: "Cute" }, filter_ids: ["cutesy", "sticker_face", "flower_crown", "love_bug"] },
-                { title: { en: "Costumes" }, filter_ids: ["wedding", "cowboy_cowgirl", "giraffe", "clown"] },
-                { title: { en: "Holidays" }, filter_ids: ["easter_bunney_cutout", "easter_chick_cutout", "bearded", "leprechaun", "lucky_face", "sweet_hearts", "elf_cutout", "santa_cutout", "frosty"] }
+                { title: { en: "Biến hình AI", vi: "Biến hình AI", vn: "Biến hình AI" }, filter_ids: ["looks_maxxing", "influencer", "okay_wig", "toothless", "bye_brows"] },
+                { title: { en: "Tóc & Râu AI", vi: "Tóc & Râu AI", vn: "Tóc & Râu AI" }, filter_ids: ["beard", "blonde_bleached", "bob_cut", "buns", "tatted", "mohawk", "braces", "bowling_ball"] },
+                { title: { en: "Trang phục AI", vi: "Trang phục AI", vn: "Trang phục AI" }, filter_ids: ["wedding", "cowboy_cowgirl", "giraffe", "clown"] },
+                { title: { en: "Đáng yêu", vi: "Đáng yêu", vn: "Đáng yêu" }, filter_ids: ["cutesy", "sticker_face", "flower_crown", "love_bug"] },
+                { title: { en: "Tiệc tùng", vi: "Tiệc tùng", vn: "Tiệc tùng" }, filter_ids: ["princess", "disco_lights", "cash_money", "happy_birthday", "slimed"] },
+                { title: { en: "Lễ hội", vi: "Lễ hội", vn: "Lễ hội" }, filter_ids: ["santa_cutout", "elf_cutout", "frosty", "sweet_hearts", "lucky_face", "bearded", "leprechaun", "easter_bunney_cutout", "easter_chick_cutout"] }
             ],
             picker_filters: [
-                "okay_wig", "influencer", "looks_maxxing", "toothless", "bye_brows",
-                "bowling_ball", "blonde_bleached", "beard", "bob_cut", "buns",
-                "tatted", "mohawk", "braces", "slimed", "princess",
-                "disco_lights", "cash_money", "happy_birthday", "cutesy", "sticker_face",
-                "flower_crown", "love_bug", "wedding", "cowboy_cowgirl", "giraffe",
-                "clown", "easter_bunney_cutout", "easter_chick_cutout", "bearded", "leprechaun",
-                "lucky_face", "sweet_hearts", "elf_cutout", "santa_cutout", "frosty"
+                "looks_maxxing", "influencer", "okay_wig", "toothless", "bye_brows",
+                "beard", "blonde_bleached", "bob_cut", "buns", "tatted", "mohawk", "braces", "bowling_ball",
+                "wedding", "cowboy_cowgirl", "giraffe", "clown",
+                "cutesy", "sticker_face", "flower_crown", "love_bug",
+                "princess", "disco_lights", "cash_money", "happy_birthday", "slimed",
+                "santa_cutout", "elf_cutout", "frosty", "sweet_hearts", "lucky_face", "bearded", "leprechaun", "easter_bunney_cutout", "easter_chick_cutout"
             ]
         }),
         camera_roll_preview_enabled: "true",
@@ -174,16 +185,30 @@ if (ua.includes("Locket")) {
         camera_roll_video_upload_enabled: "true",
         internal_camera_roll_video_upload_enabled: "true",
         longer_camera_roll_videos_enabled: "true",
+        camera_roll_video_max_duration: "60.0",
+        camera_roll_max_duration: "60.0",
+        camera_roll_duration: "60.0",
+        max_video_duration: "60.0",
+        video_max_duration: "60.0",
+        video_trim_max_duration: "60.0",
+        trim_max_duration: "60.0",
+        gold_max_duration: "60.0",
+        goldMaxDuration: "60.0",
+        video_quality_mbps: "2.5",     // Thêm bitrate video 2.5 Mbps
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
         audio_session_deactivation_enabled: "true",
         zoom_enabled: "true",
-        upload_main: "false",
-        upload_main_image_quality: "0.6",
-        upload_main_image_size: "1440",
-        upload_thumbnail_image_quality: "0.8",
-        upload_thumbnail_image_size: "1020"
+        photo_quality_balance: "quality",
+        android_photo_quality_balance: "quality",
+        upload_main: "true",
+        upload_main_image_quality: "1.0", // 100% chất lượng ảnh gốc
+        upload_main_image_size: "2560",    // Nâng lên chuẩn 2K
+        upload_thumbnail_image_quality: "1.0",
+        upload_thumbnail_image_size: "2048",
+        upload_use_webp_thumbnail: "true",
+        android_upload_use_webp_thumbnail: "true"
     });
 
     // ============================================================
