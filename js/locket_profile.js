@@ -1,34 +1,39 @@
 /***********************************************
 > Locket Profile & Badge Keeper
 > Tác giả: duongduchoan (Locket_Module)
-> Chức năng: Tự động kích hoạt & duy trì huy hiệu Locket Gold vĩnh viễn trên trang cá nhân
+> Chức năng: Kích hoạt & duy trì huy hiệu Locket Gold trên trang cá nhân (Không làm ảnh hưởng bạn bè)
 ***********************************************/
 
 const url = $request ? $request.url : '';
 
+// 1. DANH SÁCH BỎ QUA: Tuyệt đối không can thiệp vào API danh sách bạn bè, bảng tin, danh bạ
+const isFriendsOrFeed = /getFriends|friends|feed|moments|posts|contacts|syncFriends|suggestions/i.test(url);
+
 /**
- * Đệ quy gán huy hiệu Gold cho mọi object thông tin người dùng trong response
+ * Chỉ gán huy hiệu cho profile người dùng hiện tại
  */
 function injectBadge(obj) {
     if (!obj || typeof obj !== 'object') return;
 
-    // Kiểm tra nếu object chứa các thuộc tính profile Locket
-    if ('badge' in obj || 'badge_tier' in obj || 'is_gold' in obj || 'user_name' in obj || 'phone_number' in obj) {
+    // Gán huy hiệu Gold
+    if ('badge' in obj || 'badge_tier' in obj || 'is_gold' in obj) {
         obj.badge = "locket_gold";
         obj.badge_tier = "gold";
         obj.is_gold = true;
         obj.has_badge = true;
     }
 
-    // Quét sâu vào các cấp lồng nhau
+    // Quét các cấp con, bỏ qua mảng bạn bè
     for (let key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key) && typeof obj[key] === 'object' && obj[key] !== null) {
-            injectBadge(obj[key]);
+            if (key !== 'friends' && key !== 'users' && key !== 'contacts' && key !== 'suggestions') {
+                injectBadge(obj[key]);
+            }
         }
     }
 }
 
-// 1. Nếu app gửi request thay đổi thông tin cá nhân (changeProfileInfo)
+// 1. Khi app gửi yêu cầu đổi thông tin / bật huy hiệu (changeProfileInfo)
 if (url.includes("changeProfileInfo")) {
     $done({
         response: {
@@ -55,8 +60,8 @@ if (url.includes("changeProfileInfo")) {
             })
         }
     });
-} else {
-    // 2. Chặn các response lấy thông tin người dùng / bạn bè từ api.locketcamera.com
+} else if (!isFriendsOrFeed) {
+    // 2. Chỉ can thiệp các response lấy thông tin tài khoản cá nhân
     let body = $response ? $response.body : null;
     if (body) {
         try {
@@ -68,4 +73,7 @@ if (url.includes("changeProfileInfo")) {
         }
     }
     $done({ body: body });
+} else {
+    // Giữ nguyên response cho bạn bè và bảng tin
+    $done({});
 }
