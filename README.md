@@ -1,10 +1,9 @@
 # Gói Cấu Hình Dành Riêng Cho Locket 💛 (Tác giả: duongduchoan)
 
 Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp nhất:
-- **Bật huy hiệu Locket Gold vĩnh viễn:** Tự động tiêm và duy trì huy hiệu Gold trên trang cá nhân (`api.locketcamera.com`).
 - **Mở khóa bộ lọc & chụp ảnh biến hình AI:** Mở khóa icon Filter ngay trên camera với các bộ lọc AI (Chad meme looksmaxxing, mọc râu AI, đổi kiểu tóc, trang phục cưới AI, làm đẹp...).
 - **Tải ảnh / video trực tiếp từ Thư viện (Camera Roll)** lên Locket widget chất lượng cao.
-- **Mở rộng thời lượng quay và tải video lên tới 60 giây.**
+- **Thời lượng quay và tải video tối đa 30 giây.**
 - **Tăng Bitrate video và nâng chất lượng ảnh lên mức tối đa.**
 - **Mở khóa hơn 100+ caption động độc quyền (Tin Nóng, Hài hước, Gen Z, Meme...).**
 - **Chặn quảng cáo trong lịch sử/feed và tắt tracking Sentry.**
@@ -24,7 +23,6 @@ Locket_Module/
 ├── js/
 │   ├── Locket_DuyVinh09.js      # Script can thiệp RevenueCat (kích hoạt gói Gold VIP, Pro, VIP)
 │   ├── Locket_Unlocked.js       # Script can thiệp Firebase Remote Config (Bộ lọc AI, Camera Roll, Video 60s, Captions)
-│   ├── locket_profile.js        # Script can thiệp api.locketcamera.com (Giữ huy hiệu Gold luôn BẬT)
 │   └── deleteHeader.js          # Script xoá triệt để cache ETag & If-None-Match
 └── modules/
     └── Locket_Gold.sgmodule     # File module dành cho Shadowrocket / Surge / Loon
