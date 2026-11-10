@@ -1,11 +1,12 @@
 # Gói Cấu Hình Dành Riêng Cho Locket 💛 (Tác giả: duongduchoan)
 
-Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp nhất:
-- **Mở khóa bộ lọc & chụp ảnh biến hình AI:** Mở khóa icon Filter ngay trên camera với các bộ lọc AI (Chad meme looksmaxxing, mọc râu AI, đổi kiểu tóc, trang phục cưới AI, làm đẹp...).
-- **Tải ảnh / video trực tiếp từ Thư viện (Camera Roll)** lên Locket widget chất lượng cao.
-- **Thời lượng quay và tải video tối đa 30 giây.**
-- **Tăng Bitrate video và nâng chất lượng ảnh lên mức tối đa.**
-- **Mở khóa hơn 100+ caption động độc quyền (Tin Nóng, Hài hước, Gen Z, Meme...).**
+Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp và ổn định nhất:
+- **Tải ảnh / video trực tiếp từ Thư viện (Camera Roll)** lên Locket widget chất lượng cao không giới hạn.
+- **Thời lượng quay và tải video tối đa 30 giây** (không bị cắt ngắn 3 giây như bản miễn phí).
+- **Tăng Bitrate video và nâng chất lượng ảnh lên mức tối đa (2K 2048px).**
+- **Kho hơn 318+ caption động độc quyền** (Decorative by Hoan, Mục Bóng đá ⚽ Phút bồ CR7 Siuuu & M10, Gen Z, Meme, Tình yêu, Chữa lành...).
+- **Giao diện & Icon Gold VIP** độc quyền.
+- **Tối ưu hóa:** Đã loại bỏ các nút Camera AI/Cutout lỗi server, giúp camera mượt mà, không bao giờ bị văng popup bắt Upgrade lên Gold.
 - **Chặn quảng cáo trong lịch sử/feed và tắt tracking Sentry.**
 
 ---
@@ -22,7 +23,7 @@ Locket_Module/
 │   └── locket.mobileconfig      # Profile DNS Locket VIP dự phòng
 ├── js/
 │   ├── Locket_DuyVinh09.js      # Script can thiệp RevenueCat (kích hoạt gói Gold VIP, Pro, VIP)
-│   ├── Locket_Unlocked.js       # Script can thiệp Firebase Remote Config (Bộ lọc AI, Camera Roll, Video 60s, Captions)
+│   ├── Locket_Unlocked.js       # Script can thiệp Firebase Remote Config (Camera Roll, Video 30s, 318 Captions, Ảnh 2K)
 │   └── deleteHeader.js          # Script xoá triệt để cache ETag & If-None-Match
 └── modules/
     └── Locket_Gold.sgmodule     # File module dành cho Shadowrocket / Surge / Loon

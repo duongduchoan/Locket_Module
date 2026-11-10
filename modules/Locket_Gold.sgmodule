@@ -1,5 +1,5 @@
-#!name=Locket Gold VIP & Camera Roll & AI Filters
-#!desc=Mở khoá Locket Gold VIP, Mở khóa bộ lọc biến hình AI, Tải ảnh/video từ Camera Roll, Video 30s, Widget ổn định không lỗi trắng, Captions Tin Nóng & Meme.
+#!name=Locket Gold VIP & Camera Roll (30s Video)
+#!desc=Mở khoá Locket Gold VIP, Tải ảnh/video từ Camera Roll, Quay & Đăng video 30s, 318 Captions Độc Quyền (Hoan, Bóng đá, Meme), Ảnh 2K siêu nét, Widget ổn định.
 #!author=duongduchoan
 
 [Script]
@@ -9,7 +9,7 @@ revenuecat = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\
 # 2. Xóa header ETag tránh bị lưu cache gói cũ
 deleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/duongduchoan/Locket_Module/main/js/deleteHeader.js, timeout=60
 
-# 3. Kích hoạt tính năng Camera Roll, Chụp ảnh & Bộ lọc biến hình AI, Video 30s (Firebase Remote Config)
+# 3. Kích hoạt Camera Roll, Quay & Đăng video 30s, 318 Captions Độc Quyền, Ảnh 2K (Firebase Remote Config)
 locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/(locket-4252a|locket-camera)\/.+, script-path=https://raw.githubusercontent.com/duongduchoan/Locket_Module/main/js/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
