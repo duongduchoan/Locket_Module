@@ -1,12 +1,11 @@
 # Gói Cấu Hình Dành Riêng Cho Locket 💛 (Tác giả: duongduchoan)
 
-Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp và ổn định nhất:
+Thư mục này được tinh lọc **chỉ dành riêng cho Locket**, giúp mở khóa toàn bộ tính năng Locket Gold VIP cao cấp và ổn định nhất (Bản Base Ổn Định):
 - **Tải ảnh / video trực tiếp từ Thư viện (Camera Roll)** lên Locket widget chất lượng cao không giới hạn.
-- **Thời lượng quay và tải video tối đa 30 giây** (không bị cắt ngắn 3 giây như bản miễn phí).
-- **Tăng Bitrate video và nâng chất lượng ảnh lên mức tối đa (2K 2048px).**
-- **Kho hơn 318+ caption động độc quyền** (Decorative by Hoan, Mục Bóng đá ⚽ Phút bồ CR7 Siuuu & M10, Gen Z, Meme, Tình yêu, Chữa lành...).
+- **Thời lượng quay và tải video 30 giây** (không bị giới hạn 3 giây như bản thường).
+- **Kho Caption độc quyền:** Danh mục *Decorative by Hoan* và *⚽ Phút bồ (CR7 Siuuuu & M10)* cùng đầy đủ các danh mục Meme, Tình yêu, Gen Z, Đời sống...
 - **Giao diện & Icon Gold VIP** độc quyền.
-- **Tối ưu hóa:** Đã loại bỏ các nút Camera AI/Cutout lỗi server, giúp camera mượt mà, không bao giờ bị văng popup bắt Upgrade lên Gold.
+- **Ổn định tuyệt đối:** Cấu hình chuẩn sạch, không can thiệp server tin nhắn/tài khoản (đăng ảnh, gửi video, nhắn tin chat hoạt động 100% mượt mà).
 - **Chặn quảng cáo trong lịch sử/feed và tắt tracking Sentry.**
 
 ---
